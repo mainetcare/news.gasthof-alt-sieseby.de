@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="<?= $this->language ?>"<?php if ( $this->isRTL ): ?> dir="rtl"<?php endif; ?>>
+<head>
+
+	<?php $this->block( 'head' ); ?>
+    <title><?= $this->title ?></title>
+    <base href="<?= $this->base ?>">
+    <meta charset="utf-8">
+
+	<?php $this->block( 'meta' ); ?>
+    <meta name="robots" content="<?= $this->robots ?>">
+    <meta name="description" content="<?= $this->description ?>">
+	<?php $this->endblock(); ?>
+    <link rel="shortcut icon" href="/files/favicons/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/files/favicons/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/files/css/mnc.css">
+
+	<?= $this->stylesheets ?>
+	<?= $this->mooScripts ?>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+            crossorigin="anonymous"></script>
+	<?= $this->head ?>
+	<?php $this->endblock(); ?>
+
+</head>
+<body id="top" class="<?php if ( $this->class ) {
+	echo ' ' . $this->class;
+} ?>"<?php if ( $this->onload ): ?> onload="<?= $this->onload ?>"<?php endif; ?> itemscope itemtype="http://schema.org/WebPage">
+
+<?php $this->block( 'body' ); ?>
+<?php $this->sections( 'top' ); ?>
+
+<div id="wrapper">
+
+    <div class="wrapper_header">
+        <div class="container">
+            <header id="header">
+                <div class="row">
+                    <div class="col-8 align-self-center">
+                        <a href="/" itemprop="url" title="Zur Startseite">
+                            <img src="/files/sieseby/gasthof_alt_sieseby_630.png" alt="Logo Schriftzug Gasthof Alt Sieseby">
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <a href="/" itemprop="url" title="Zur Startseite">
+                                <img class="img-fluid" src="/files/sieseby/Koechin_mit_Topf.jpg" alt="Logo Köchin Gasthof Alt Sieseby">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=".col-md-6 .ml-md-auto">
+                        {{insert_module::29}}
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <main id="main" class="col-12">
+                <div class="inside h-100">
+					<?= $this->main ?>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="py-3 bg-white"></div>
+
+    <footer id="footer" class="py-3 list-unstyled">
+        <div class="inside">
+            <div class="row">
+                <div class="col-12">
+					<?= $this->footer ?>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<?php $this->sections( 'bottom' ); ?>
+<?php $this->endblock(); ?>
+<?= $this->mootools ?>
+</body>
+</html>

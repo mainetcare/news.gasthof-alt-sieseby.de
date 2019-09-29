@@ -1,0 +1,5 @@
+.wrapper_header { background-image: url("/files/sieseby/gasthof_alt_sieseby_630_bg.png"); background-repeat: repeat-x; background-position: 0 14px; }
+
+h1, h2, h3, h4, h5, a { color: #84969c; }
+
+.nav .active { color: #121212; }

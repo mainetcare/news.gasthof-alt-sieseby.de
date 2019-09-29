@@ -1,0 +1,21 @@
+body {
+
+}
+
+$color_gruen:#84969c;
+$color_webblack: #121212;
+
+.wrapper_header {
+  background-image:url("/files/sieseby/gasthof_alt_sieseby_630_bg.png");
+  background-repeat: repeat-x;
+  background-position: 0 14px;
+}
+
+h1,h2,h3,h4,h5,a {
+  color:$color_gruen;
+}
+
+.nav .active {
+  color:$color_webblack;
+}
+

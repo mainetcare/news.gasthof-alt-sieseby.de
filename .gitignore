@@ -1,0 +1,22 @@
+# App config
+/.htaccess
+/assets/
+/config/*
+/contao-manager/
+# versionize files/
+/system/*
+!/system/config/
+!/system/modules/
+/system/modules/*/.skip
+/system/config/localconfig.php
+/system/config/tcpdf.php
+# versionize templates
+/var/
+/vendor/
+/web/
+/templates/mi/.sass-cache/*
+
+/composer.lock
+
+
+

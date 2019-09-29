@@ -17,6 +17,7 @@
 /templates/mi/.sass-cache/*
 
 /composer.lock
+/composer.json
 
 
 
